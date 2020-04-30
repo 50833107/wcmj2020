@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -116,14 +123,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>CMSiMDE 網際內容管理系統</h1>
+                <h1>50833107 許瑋宸 網管</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">50833107 許瑋宸 網管</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li class='has-children'><a href='網管.html'>網管</a><ul class='dropdown'><li><a href='W2 0313.html'>W2 0313</a><li><a href='W3 0320.html'>W3 0320</a><li><a href='W4 0327.html'>W4 0327</a><li><a href='W6 0410.html'>W6 0410</a><li><a href='W8 0424.html'>W8 0424</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,10 +154,13 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">W2 0313 << <a href='W2 0313.html'>Previous</a> <a href='W4 0327.html'>Next</a> >> W4 0327<br /><h1>W3 0320</h1>
+<p><span>terminology </span>專業術語、<span>particular </span>特別、<span>technical </span>技術、<span>application </span>應用、</p>
+<p><span>software </span>軟體、<span>hardware </span>硬體、<span>firmwarre </span>韌體、<span>machine language </span>機器語言、</p>
+<p><span>URL:Uniform Resourse Locator  </span>統一資源定位、<span>command wundow </span>命令視窗、<span>submodule </span>子模組</p>
+<p>程式令<span>:</span></p>
+<p><span>Y:←</span>指<span>y</span>槽<span> Y:\   ←</span>表示<span>Y</span>槽的<span>root</span>根目錄<span> &gt; </span>為回應符號<span>(prormptsign)  \ </span>為<span>blackslash </span>反斜線<span> dir</span>為顯示目錄內容的指令<span> cd tmp </span>表示<span>change directory </span>到指定的目錄<span> git</span>為分散式版次管理的指令名稱<span> git clone</span>表示要使用<span>git</span>對遠端的倉儲進行<span>clone</span>。</p>
+<br />W2 0313 << <a href='W2 0313.html'>Previous</a> <a href='W4 0327.html'>Next</a> >> W4 0327</div>
         
     <!-- footer -->
       <div class="container">
